@@ -7,6 +7,356 @@
     <title>Algoritm</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./Instagram post - 1.png" type="image/png">
+
+    <style>
+        @import url('https://v1.fontapi.ir/css/SFProDisplay');
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: SF Pro Display, sans-serif;
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        body {
+            background-color: blueviolet;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+        }
+
+        .welcome {
+            color: white;
+            font-weight: 100;
+            font-size: 100px;
+            position: absolute;
+            transform: translateX(500px) translateY(300px);
+            animation: welcome 2s linear forwards;
+        }
+
+        #algoritm {
+            color: rgb(255, 255, 255);
+            font-size: 50px;
+            margin-top: 320px;
+            animation: algoritm 2.5s linear forwards;
+        }
+
+        #get-started {
+            width: 250px;
+            height: 50px;
+            position: absolute;
+            border: none;
+            transform: translateY(450px) scale(1.2);
+            color: white;
+            background-color: blue;
+            border-radius: 100px;
+            font-size: 30px;
+            font-weight: 200;
+            cursor: pointer;
+            border-left: 4px solid rgb(0, 0, 208);
+            border-bottom: 8px solid rgb(0, 0, 208);
+            animation: get-started 2.5s linear forwards;
+        }
+
+        #get-started:active {
+            border-left: 4px solid rgb(0, 0, 208);
+            border-bottom: 4px solid rgb(0, 0, 208);
+        }
+
+        @keyframes welcome {
+            from {
+                transform: translateX(500px) translateY(300px);
+            }
+
+            to {
+                transform: translateX(-500px) translateY(300px);
+            }
+        }
+
+        @keyframes algoritm {
+            0% {
+                filter: blur(8px);
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            70% {
+                filter: blur(8px);
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            100% {
+                filter: blur(0px);
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+
+        @keyframes get-started {
+            0% {
+                filter: blur(8px);
+                opacity: 0;
+                transform: scale(0.9) translateY(450px);
+            }
+
+            70% {
+                filter: blur(8px);
+                opacity: 0;
+                transform: scale(0.9 translateY(450px));
+            }
+
+            100% {
+                filter: blur(0px);
+                opacity: 1;
+                transform: scale(1) translateY(450px);
+            }
+        }
+
+        @keyframes started {
+            from {
+                filter: blur(0px);
+                opacity: 1;
+                transform: scale(1) translateY(450px);
+            }
+
+            to {
+                filter: blur(8px);
+                opacity: 0;
+                transform: scale(0.9) translateY(450px);
+            }
+        }
+
+        @keyframes starte {
+            from {
+                filter: blur(0px);
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            to {
+                filter: blur(8px);
+                opacity: 0;
+                transform: scale(0.9);
+            }
+        }
+
+        #algoritmSection {
+            position: absolute;
+            /* z-index: -1;
+    width: 90%;
+    height: 80%;
+    border: 1px solid rgba(178, 178, 178, 0.565);
+    /* margin-top: 30px; */
+            color: white;
+            border-radius: 25px;
+            padding: 5px;
+            margin-top: 100px;
+            display: grid;
+            place-items: center;
+            display: none;
+        }
+
+        .algoritmName {
+            font-weight: 200;
+        }
+
+        #algoritmSlogan {
+            margin-top: 5px;
+            color: rgb(0, 255, 0);
+            font-size: 20px;
+        }
+
+        .table {
+            width: auto;
+            height: auto;
+            margin: auto 0;
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+
+        .row {
+            width: 100%;
+            height: auto;
+            display: flex;
+        }
+
+        .btn {
+            width: 30px;
+            height: 30px;
+            font-size: 15px;
+            border-radius: 10px;
+            border: 1px solid blueviolet;
+            font-weight: 300;
+            cursor: pointer;
+        }
+
+        .btn:focus {
+            background-color: rgb(139, 131, 255);
+            color: white;
+        }
+
+        #try {
+            padding: 5px 20px;
+            font-size: 25px;
+            color: rgb(11, 0, 0);
+            background: rgb(0, 188, 214);
+            background: radial-gradient(circle, rgba(0, 188, 214, 1) 0%, rgba(0, 234, 220, 1) 68%, rgba(0, 255, 244, 1) 100%);
+            border-radius: 100px;
+            border: none;
+            font-weight: 500;
+            letter-spacing: 2px;
+            cursor: pointer;
+            margin-top: 25px;
+            display: none;
+            position: absolute;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        #loader {
+            position: absolute;
+            transform: translateY(400px);
+        }
+
+        /* ///////////////////////////////////////////////////////////////////////////////// */
+        .wrapper {
+            width: 200px;
+            height: 60px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .circle {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            border-radius: 50%;
+            background-color: #fff;
+            left: 15%;
+            transform-origin: 50%;
+            animation: circle7124 .5s alternate infinite ease;
+        }
+
+        @keyframes circle7124 {
+            0% {
+                top: 60px;
+                height: 5px;
+                border-radius: 50px 50px 25px 25px;
+                transform: scaleX(1.7);
+            }
+
+            40% {
+                height: 20px;
+                border-radius: 50%;
+                transform: scaleX(1);
+            }
+
+            100% {
+                top: 0%;
+            }
+        }
+
+        .circle:nth-child(2) {
+            left: 45%;
+            animation-delay: .2s;
+        }
+
+        .circle:nth-child(3) {
+            left: auto;
+            right: 15%;
+            animation-delay: .3s;
+        }
+
+        /* .shadow {
+    width: 20px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.9);
+    position: absolute;
+    top: 62px;
+    transform-origin: 50%;
+    z-index: -1;
+    left: 15%;
+    filter: blur(1px);
+    animation: shadow046 .5s alternate infinite ease;
+  } */
+
+        @keyframes shadow046 {
+            0% {
+                transform: scaleX(1.5);
+            }
+
+            40% {
+                transform: scaleX(1);
+                opacity: .7;
+            }
+
+            100% {
+                transform: scaleX(.2);
+                opacity: .4;
+            }
+        }
+
+        .shadow:nth-child(4) {
+            left: 45%;
+            animation-delay: .2s
+        }
+
+        .shadow:nth-child(5) {
+            left: auto;
+            right: 15%;
+            animation-delay: .3s;
+        }
+
+        /* ////////////////////////////////////////////////////////////////////////////////// */
+    </style>
 </head>
 
 <body>
@@ -27,138 +377,229 @@
 
     <section id="algoritmSection">
 
-        <center><h1 class="algoritmName">Find the memorized number</h1>
-        <h3 id="algoritmSlogan"></h3>
+        <center>
+            <h1 class="algoritmName">Find the memorized number</h1>
+            <h3 id="algoritmSlogan"></h3>
 
-        <div class="table">
-            <div class="row">
-                <button class="btn">1</button>
-                <button class="btn">2</button>
-                <button class="btn">3</button>
-                <button class="btn">4</button>
-                <button class="btn">5</button>
-                <button class="btn">6</button>
-                <button class="btn">7</button>
-                <button class="btn">8</button>
-                <button class="btn">9</button>
-                <button class="btn">10</button>
+            <div class="table">
+                <div class="row">
+                    <button class="btn">1</button>
+                    <button class="btn">2</button>
+                    <button class="btn">3</button>
+                    <button class="btn">4</button>
+                    <button class="btn">5</button>
+                    <button class="btn">6</button>
+                    <button class="btn">7</button>
+                    <button class="btn">8</button>
+                    <button class="btn">9</button>
+                    <button class="btn">10</button>
+                </div>
+                <div class="row">
+                    <button class="btn">11</button>
+                    <button class="btn">12</button>
+                    <button class="btn">13</button>
+                    <button class="btn">13</button>
+                    <button class="btn">14</button>
+                    <button class="btn">15</button>
+                    <button class="btn">16</button>
+                    <button class="btn">17</button>
+                    <button class="btn">18</button>
+                    <button class="btn">19</button>
+                </div>
+                <div class="row">
+                    <button class="btn">20</button>
+                    <button class="btn">21</button>
+                    <button class="btn">22</button>
+                    <button class="btn">23</button>
+                    <button class="btn">24</button>
+                    <button class="btn">25</button>
+                    <button class="btn">26</button>
+                    <button class="btn">27</button>
+                    <button class="btn">28</button>
+                    <button class="btn">29</button>
+                </div>
+                <div class="row">
+                    <button class="btn">30</button>
+                    <button class="btn">31</button>
+                    <button class="btn">32</button>
+                    <button class="btn">33</button>
+                    <button class="btn">34</button>
+                    <button class="btn">35</button>
+                    <button class="btn">36</button>
+                    <button class="btn">37</button>
+                    <button class="btn">38</button>
+                    <button class="btn">39</button>
+                </div>
+                <div class="row">
+                    <button class="btn">40</button>
+                    <button class="btn">41</button>
+                    <button class="btn">42</button>
+                    <button class="btn">43</button>
+                    <button class="btn">44</button>
+                    <button class="btn">45</button>
+                    <button class="btn">46</button>
+                    <button class="btn">47</button>
+                    <button class="btn">48</button>
+                    <button class="btn">49</button>
+                </div>
+                <div class="row">
+                    <button class="btn">50</button>
+                    <button class="btn">51</button>
+                    <button class="btn">52</button>
+                    <button class="btn">53</button>
+                    <button class="btn">54</button>
+                    <button class="btn">55</button>
+                    <button class="btn">56</button>
+                    <button class="btn">57</button>
+                    <button class="btn">58</button>
+                    <button class="btn">59</button>
+                </div>
+                <div class="row">
+                    <button class="btn">60</button>
+                    <button class="btn">61</button>
+                    <button class="btn">62</button>
+                    <button class="btn">63</button>
+                    <button class="btn">64</button>
+                    <button class="btn">65</button>
+                    <button class="btn">66</button>
+                    <button class="btn">67</button>
+                    <button class="btn">68</button>
+                    <button class="btn">69</button>
+                </div>
+                <div class="row">
+                    <button class="btn">70</button>
+                    <button class="btn">71</button>
+                    <button class="btn">72</button>
+                    <button class="btn">73</button>
+                    <button class="btn">74</button>
+                    <button class="btn">75</button>
+                    <button class="btn">76</button>
+                    <button class="btn">77</button>
+                    <button class="btn">78</button>
+                    <button class="btn">79</button>
+                </div>
+                <div class="row">
+                    <button class="btn">80</button>
+                    <button class="btn">81</button>
+                    <button class="btn">82</button>
+                    <button class="btn">83</button>
+                    <button class="btn">84</button>
+                    <button class="btn">85</button>
+                    <button class="btn">86</button>
+                    <button class="btn">87</button>
+                    <button class="btn">88</button>
+                    <button class="btn">89</button>
+                </div>
+                <div class="row">
+                    <button class="btn">90</button>
+                    <button class="btn">91</button>
+                    <button class="btn">92</button>
+                    <button class="btn">93</button>
+                    <button class="btn">94</button>
+                    <button class="btn">95</button>
+                    <button class="btn">96</button>
+                    <button class="btn">97</button>
+                    <button class="btn">98</button>
+                    <button class="btn">99</button>
+                </div>
             </div>
-            <div class="row">
-                <button class="btn">11</button>
-                <button class="btn">12</button>
-                <button class="btn">13</button>
-                <button class="btn">13</button>
-                <button class="btn">14</button>
-                <button class="btn">15</button>
-                <button class="btn">16</button>
-                <button class="btn">17</button>
-                <button class="btn">18</button>
-                <button class="btn">19</button>
-            </div>
-            <div class="row">
-                <button class="btn">20</button>
-                <button class="btn">21</button>
-                <button class="btn">22</button>
-                <button class="btn">23</button>
-                <button class="btn">24</button>
-                <button class="btn">25</button>
-                <button class="btn">26</button>
-                <button class="btn">27</button>
-                <button class="btn">28</button>
-                <button class="btn">29</button>
-            </div>
-            <div class="row">
-                <button class="btn">30</button>
-                <button class="btn">31</button>
-                <button class="btn">32</button>
-                <button class="btn">33</button>
-                <button class="btn">34</button>
-                <button class="btn">35</button>
-                <button class="btn">36</button>
-                <button class="btn">37</button>
-                <button class="btn">38</button>
-                <button class="btn">39</button>
-            </div>
-            <div class="row">
-                <button class="btn">40</button>
-                <button class="btn">41</button>
-                <button class="btn">42</button>
-                <button class="btn">43</button>
-                <button class="btn">44</button>
-                <button class="btn">45</button>
-                <button class="btn">46</button>
-                <button class="btn">47</button>
-                <button class="btn">48</button>
-                <button class="btn">49</button>
-            </div>
-            <div class="row">
-                <button class="btn">50</button>
-                <button class="btn">51</button>
-                <button class="btn">52</button>
-                <button class="btn">53</button>
-                <button class="btn">54</button>
-                <button class="btn">55</button>
-                <button class="btn">56</button>
-                <button class="btn">57</button>
-                <button class="btn">58</button>
-                <button class="btn">59</button>
-            </div>
-            <div class="row">
-                <button class="btn">60</button>
-                <button class="btn">61</button>
-                <button class="btn">62</button>
-                <button class="btn">63</button>
-                <button class="btn">64</button>
-                <button class="btn">65</button>
-                <button class="btn">66</button>
-                <button class="btn">67</button>
-                <button class="btn">68</button>
-                <button class="btn">69</button>
-            </div>
-            <div class="row">
-                <button class="btn">70</button>
-                <button class="btn">71</button>
-                <button class="btn">72</button>
-                <button class="btn">73</button>
-                <button class="btn">74</button>
-                <button class="btn">75</button>
-                <button class="btn">76</button>
-                <button class="btn">77</button>
-                <button class="btn">78</button>
-                <button class="btn">79</button>
-            </div>
-            <div class="row">
-                <button class="btn">80</button>
-                <button class="btn">81</button>
-                <button class="btn">82</button>
-                <button class="btn">83</button>
-                <button class="btn">84</button>
-                <button class="btn">85</button>
-                <button class="btn">86</button>
-                <button class="btn">87</button>
-                <button class="btn">88</button>
-                <button class="btn">89</button>
-            </div>
-            <div class="row">
-                <button class="btn">90</button>
-                <button class="btn">91</button>
-                <button class="btn">92</button>
-                <button class="btn">93</button>
-                <button class="btn">94</button>
-                <button class="btn">95</button>
-                <button class="btn">96</button>
-                <button class="btn">97</button>
-                <button class="btn">98</button>
-                <button class="btn">99</button>
-            </div>
-        </div>
 
-        <button id="try">Try Again</button>
+            <button id="try">Try Again</button>
 
-    </center>
+        </center>
     </section>
 
     <script src="./script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let getStarted = document.getElementById('get-started')
+            let algoritm = document.getElementById('algoritm')
+            let loader = document.getElementById('loader')
+            let algoritmSection = document.getElementById('algoritmSection')
+
+            loader.style.display = 'none'
+
+            getStarted.onclick = () => {
+                getStarted.style.animation = 'started .4s linear forwards'
+                algoritm.style.animation = 'starte .4s linear forwards'
+                setTimeout(() => {
+                    loader.style.display = 'flex'
+
+                    setTimeout(() => {
+                        loader.style.display = 'none'
+                        algoritm.style.display = 'none'
+                        getStarted.style.display = 'none'
+                        algoritmSection.style.display = 'block'
+                    }, 4000);
+                }, 100);
+            }
+        });
+
+        // /////////////////////////////////////////////////////////////////////////
+        let tryAgainButton = document.getElementById('try');
+        let btns = document.querySelectorAll('.btn');
+        let messageElement = document.getElementById('algoritmSlogan');
+
+        // Խաղի վիճակը պահելու համար
+        let secretNumber, gameOver;
+
+        const initGame = () => {
+            secretNumber = Math.floor(Math.random() * 99) + 1;  // Պատահական թիվը
+            console.log("Նշված թիվը (ձեզ համար միայն): " + secretNumber);
+            gameOver = false;  // Խաղը դեռ չի ավարտվել
+            tryAgainButton.style.display = 'none';  // "Try Again" կոճակը թաքցնում ենք սկզբում
+
+            // Կոճակների տեսքը վերադառնում է սկզբնական վիճակին
+            btns.forEach(button => {
+                button.style.backgroundColor = 'rgb(255, 255, 255)';
+                button.style.color = 'black';
+            });
+
+            // Գործողության ցուցումը կարգավորում է հաղորդագրությունը
+        };
+
+        // Հաղորդագրությունների ցուցադրումը
+        const displayMessage = (message) => {
+            messageElement.innerHTML = message;
+        };
+
+        // Կոճակի սեղմման լիսթեները
+        const handleButtonClick = (button) => {
+            if (gameOver) return; // Եթե խաղը ավարտվել է, կոճակները չեն աշխատում
+
+            const userGuess = parseInt(button.textContent);
+
+            if (userGuess < secretNumber) {
+                displayMessage("Your number is smaller than<br>the memorized number.");
+                button.style.backgroundColor = 'red';
+                button.style.color = 'white';
+            } else if (userGuess > secretNumber) {
+                displayMessage("Your number is greater than<br>the memorized number.");
+                button.style.backgroundColor = 'red';
+                button.style.color = 'white';
+            } else {
+                displayMessage("Your number matches.<br>You won!");
+                button.style.backgroundColor = 'rgb(0, 210, 0)';
+                button.style.color = 'white';
+                tryAgainButton.style.display = 'flex';  // "Try Again" կոճակը դարձնում է տեսանելի
+                gameOver = true;  // Խաղը ավարտվեց
+            }
+        };
+
+        // Try Again կոճակի սեղմման գործառույթը
+        tryAgainButton.onclick = () => {
+            initGame();  // Նոր խաղի սկիզբ
+        };
+
+        // Կոճակների վրա լսողներ ավելացնում ենք
+        btns.forEach(button => {
+            button.addEventListener('click', () => handleButtonClick(button));
+        });
+
+        // Սկզբնական խաղը սկսվում է
+        initGame();
+
+    </script>
 </body>
 
 </html>
