@@ -33,16 +33,16 @@
         .welcome {
             color: white;
             font-weight: 100;
-            font-size: 100px;
+            font-size: 80px;
             position: absolute;
-            transform: translateX(500px) translateY(300px);
+            transform: translateX(500px) translateY(200px);
             animation: welcome 2s linear forwards;
         }
 
         #algoritm {
             color: rgb(255, 255, 255);
-            font-size: 50px;
-            margin-top: 320px;
+            font-size: 60px;
+            margin-top: 200px;
             animation: algoritm 2.5s linear forwards;
         }
 
@@ -51,7 +51,7 @@
             height: 50px;
             position: absolute;
             border: none;
-            transform: translateY(450px) scale(1.2);
+            transform: translateY(330px) scale(1.2);
             color: white;
             background-color: blue;
             border-radius: 100px;
@@ -70,11 +70,11 @@
 
         @keyframes welcome {
             from {
-                transform: translateX(500px) translateY(300px);
+                transform: translateX(500px) translateY(230px);
             }
 
             to {
-                transform: translateX(-500px) translateY(300px);
+                transform: translateX(-500px) translateY(230px);
             }
         }
 
@@ -103,19 +103,19 @@
             0% {
                 filter: blur(8px);
                 opacity: 0;
-                transform: scale(0.9) translateY(450px);
+                transform: scale(0.9) translateY(330px);
             }
 
             70% {
                 filter: blur(8px);
                 opacity: 0;
-                transform: scale(0.9 translateY(450px));
+                transform: scale(0.9 translateY(330px));
             }
 
             100% {
                 filter: blur(0px);
                 opacity: 1;
-                transform: scale(1) translateY(450px);
+                transform: scale(1) translateY(330px);
             }
         }
 
@@ -123,13 +123,13 @@
             from {
                 filter: blur(0px);
                 opacity: 1;
-                transform: scale(1) translateY(450px);
+                transform: scale(1) translateY(330px);
             }
 
             to {
                 filter: blur(8px);
                 opacity: 0;
-                transform: scale(0.9) translateY(450px);
+                transform: scale(0.9) translateY(330px);
             }
         }
 
@@ -262,7 +262,7 @@
 
         #loader {
             position: absolute;
-            transform: translateY(400px);
+            transform: translateY(280px);
         }
 
         /* ///////////////////////////////////////////////////////////////////////////////// */
